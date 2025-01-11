@@ -1,0 +1,205 @@
+[
+  {
+    "formTitle": "Admission Form",
+    "fields": [
+      {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name",
+        "validation": {
+          "required": true,
+          "minLength": 2,
+          "regexPattern": "^[a-zA-Z]+$"
+        }
+      },
+      {
+        "type": "text",
+        "name": "middleName",
+        "label": "Middle Name",
+        "validation": { "required": true, "minLength": 2 }
+      },
+      {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name",
+        "validation": { "required": true, "minLength": 2 }
+      },
+      {
+        "type": "email",
+        "name": "email",
+        "label": "Email",
+        "validation": {
+          "required": true,
+          "regexPattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          "errorMessage": "Invalid email format. Try different (e.g. user@example.com)"
+        }
+      },
+      {
+        "type": "number",
+        "name": "age",
+        "label": "Age",
+        "validation": { "required": true, "min": 18, "max": 60 }
+      },
+      {
+        "type": "date",
+        "name": "examDate",
+        "label": "Exam Date",
+        "validation": {
+          "required": true,
+          "min": "2024-01-01",
+          "max": "2024-12-31"
+        }
+      },
+      {
+        "type": "select",
+        "name": "course",
+        "label": "Course",
+        "options": ["Engineering", "Medical", "Arts"],
+        "validation": { "required": true }
+      }
+    ]
+  },
+  {
+    "formTitle": "Exam Form",
+    "fields": [
+      {
+        "type": "text",
+        "name": "acadmiYear",
+        "label": "Academic Year",
+        "validation": { "required": true, "minLength": 2 }
+      },
+      {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name",
+        "validation": { "required": true, "minLength": 2 }
+      },
+      {
+        "type": "email",
+        "name": "email",
+        "label": "Email",
+        "validation": { "required": true }
+      },
+      {
+        "type": "select",
+        "name": "course",
+        "label": "Course",
+        "options": ["Engineering", "Medical", "Arts"],
+        "validation": { "required": true }
+      },
+      {
+        "type": "date",
+        "name": "examDate",
+        "label": "Exam Date",
+        "validation": {
+          "required": true,
+          "min": "2024-01-01",
+          "max": "2024-12-31"
+        }
+      }
+    ]
+  },
+  {
+    "formTitle": "Test Form",
+    "formClassName": "flex flex-col p-4 bg-gray-100 rounded-lg",
+    "fields": [
+      {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name",
+        "validation": {
+          "required": true,
+          "minLength": 2,
+          "regexPattern": "^[a-zA-Z]+$"
+        },
+        "className": "border-2 rounded-lg border-gray-300 p-2",
+        "layout": {
+          "order": 1,
+          "width": "1",
+          "wrapperClassName": "w-full sm:w-1/2 mb-4"
+        }
+      },
+      {
+        "type": "text",
+        "name": "middleName",
+        "label": "Middle Name",
+        "validation": { "required": true, "minLength": 2 },
+        "className": "border-2 rounded-lg border-gray-300 p-2",
+        "layout": {
+          "order": 2,
+          "width": "1",
+          "wrapperClassName": "w-full sm:w-1/2 mb-4"
+        }
+      },
+      {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name",
+        "validation": { "required": true, "minLength": 2 },
+        "className": "border-2 rounded-lg border-gray-300 p-2",
+        "layout": {
+          "order": 3,
+          "width": "full",
+          "wrapperClassName": "w-full sm:w-1/2 mb-4"
+        }
+      },
+      {
+        "type": "email",
+        "name": "email",
+        "label": "Email",
+        "validation": {
+          "required": true,
+          "regexPattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          "errorMessage": "Invalid email format. Try different (e.g. user@example.com)"
+        },
+        "className": "border-2 rounded-lg border-gray-300 p-2",
+        "layout": {
+          "order": 4,
+          "width": "full",
+          "wrapperClassName": "w-full sm:w-1/2 mb-4"
+        }
+      },
+      {
+        "type": "number",
+        "name": "age",
+        "label": "Age",
+        "validation": { "required": true, "min": 18, "max": 60 },
+        "className": "border-2 rounded-lg border-gray-300 p-2",
+        "layout": {
+          "order": 5,
+          "width": "full",
+          "wrapperClassName": "w-full sm:w-1/2 mb-4"
+        }
+      },
+      {
+        "type": "date",
+        "name": "examDate",
+        "label": "Exam Date",
+        "validation": {
+          "required": true,
+          "min": "2024-01-01",
+          "max": "2024-12-31"
+        },
+        "className": "border-2 rounded-lg border-gray-300 p-2",
+        "layout": {
+          "order": 6,
+          "width": "full",
+          "wrapperClassName": "w-full sm:w-1/2 mb-4"
+        }
+      },
+      {
+        "type": "select",
+        "name": "course",
+        "label": "Course",
+        "options": ["Engineering", "Medical", "Arts"],
+        "validation": { "required": true },
+        "className": "border-2 rounded-lg border-gray-300 p-2",
+        "layout": {
+          "order": 7,
+          "width": "full",
+          "wrapperClassName": "w-full sm:w-1/2 mb-4"
+        }
+      }
+    ]
+  }
+]
